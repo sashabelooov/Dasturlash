@@ -1,7 +1,15 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+from decouple import config
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:2323@localhost:5432/postgres"
+
+USER = config("USER")
+PASSWORD = config("PASSWORD")
+HOST = config("HOST")
+PORT = config("PORT")
+DB_NAME = config("DB_NAME")
+
+SQLALCHEMY_DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DB_NAME}"
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
