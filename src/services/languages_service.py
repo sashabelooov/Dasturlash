@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from models.programming_language import ProgrammingLanguage
-from schemas.programming_language import ProgrammingLanguageCreate
+from models.languages_model import ProgrammingLanguage
+from schemas.languages_schema import ProgrammingLanguageCreate
 
 
 

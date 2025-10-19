@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from schemas.programming_language import ProgrammingLanguageCreate, ProgrammingLanguageRead
-from services.programming_language_service import create_language, get_languages
+from schemas.languages_schema import ProgrammingLanguageCreate, ProgrammingLanguageRead
+from services.languages_service import create_language, get_languages
 from database import get_db
 
 
